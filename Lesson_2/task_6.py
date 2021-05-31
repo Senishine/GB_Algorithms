@@ -19,7 +19,7 @@ def get_number():
         return number
     except ValueError:
         print(f'Incorrect number')
-        get_number()
+        return get_number()
 
 
 def riddle(attempts=10):

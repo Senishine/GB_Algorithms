@@ -29,12 +29,10 @@ def sum_of_sequence(size):
 
 
 def add_next_number(current_number, limit):
-    to_add = 0
-    if current_number < limit:
-        to_add = add_next_number(current_number + 1, limit)
-    return current_number + to_add
+    return current_number + (add_next_number(current_number + 1, limit) if current_number < limit else 0)
 
 
 n = read_number()
 result = sum_of_sequence(n)
 print(result)
+assert result[0] == result[1]
