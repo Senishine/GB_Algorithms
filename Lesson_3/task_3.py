@@ -19,7 +19,8 @@ def simple_algorithm(text: str):
     result = set()
     for i in range(1, len(text)):
         for j in range(0, len(text) - i + 1):
-            # result.add(hash(text[j:(j + i)])) - нельзя тк
+            # не следует, т.к. ф-ция hash может давать одинакоый результат для разных строк
+            # result.add(hash(text[j:(j + i)]))
             result.add(text[j:(j + i)])
     return len(result)
 
